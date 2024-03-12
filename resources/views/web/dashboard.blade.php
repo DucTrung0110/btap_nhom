@@ -54,15 +54,19 @@
                                         <td class="account__table--body__child--items">#2014</td>
                                         <td class="account__table--body__child--items">November 24, 2022</td>
                                         <td class="account__table--body__child--items">Paid</td>
-                                        <td class="account__table--body__child--items">Unfulfilled</td>
+                                        <td class="account__table--body__child--items">Shipped</td>
                                         <td class="account__table--body__child--items">$40.00 USD</td>
+                                        <td class="account__table--body__child--items"><button type="button" class="btn btn-success">Received</button></td>
+                                        <td class="account__table--body__child--items"><button type="button" class="btn btn-secondary">Detail</button></td>
                                     </tr>
                                     <tr class="account__table--body__child">
                                         <td class="account__table--body__child--items">#2164</td>
                                         <td class="account__table--body__child--items">November 24, 2022</td>
                                         <td class="account__table--body__child--items">Paid</td>
-                                        <td class="account__table--body__child--items">Unfulfilled</td>
+                                        <td class="account__table--body__child--items">Processing</td>
                                         <td class="account__table--body__child--items">$36.00 USD</td>
+                                        <td class="account__table--body__child--items"><button type="button" class="btn btn-danger">Cancel</button></td>
+                                        <td class="account__table--body__child--items"><button type="button" class="btn btn-secondary">Detail</button> </td>
                                     </tr>
                                     </tbody>
                                     <tbody class="account__table--body mobile__block">

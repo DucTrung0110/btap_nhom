@@ -22,4 +22,12 @@ class Webcontroller extends Controller
     {
         return view('web.dashboard');
     }
+    public function shoppingcart()
+    {
+        return view('web.shoppingcart');
+    }
+    public function checkout()
+    {
+        return view('web.checkout');
+    }
 }
