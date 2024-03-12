@@ -100,10 +100,6 @@
                                                 <td><span>$350</span></td>
                                             </tr>
                                             <tr>
-                                                <th>Discount:</th>
-                                                <td><span>-10%</span></td>
-                                            </tr>
-                                            <tr>
                                                 <th>Total Amount:</th>
                                                 <td><span>$315</span></td>
                                             </tr>
