@@ -22,4 +22,8 @@ class Webcontroller extends Controller
     {
         return view('web.dashboard');
     }
+    public function invoice()
+    {
+        return view('web.invoice');
+    }
 }
