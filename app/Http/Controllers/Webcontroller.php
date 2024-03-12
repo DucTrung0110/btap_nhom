@@ -14,14 +14,9 @@ class Webcontroller extends Controller
     {
      return view('login');
     }
-    public function li(Request $request)
+    public function contact()
     {
-     $email = $request->get('email');
-     $password =$request->get('password');
-     UserLogin::create([
-         'email'=>$email,
-         'password'=>$password,
-     ]);
-     return 'A đù ngon';
+        return view('web.contact');
     }
+
 }

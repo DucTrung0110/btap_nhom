@@ -12,7 +12,7 @@
                         <div class="footer__widget--inner">
                             <div class="footer__logo">
                                 <a class="footer__logo--link" href="index.html">
-                                    <img class="footer__logo--img" src="/img/logo/nav-log.webp" alt="logo-img">
+                                    <img class="footer__logo--img" src="assets/img/logo/nav-log.webp" alt="logo-img">
                                 </a>
                             </div>
                             <p class="footer__widget--desc">Corporate clients and leisure travelers has
@@ -139,7 +139,7 @@
             <div class="footer__bottom--inenr d-flex justify-content-between align-items-center">
                 <p class="copyright__content mb-0"><span class="text__secondary">© 2022</span> Powered by <a class="copyright__content--link" target="_blank" href="https://themeforest.net/search/hooktheme">Hooktheme</a> .  All Rights Reserved.</p>
                 <div class="footer__payment">
-                    <img src="/img/icon/payment-img.webp" alt="payment-img">
+                    <img src="assets/img/icon/payment-img.webp" alt="payment-img">
                 </div>
             </div>
         </div>
