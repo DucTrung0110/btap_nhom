@@ -141,14 +141,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="checkout__discount--code">
-                                <form class="d-flex" action="#">
-                                    <label>
-                                        <input class="checkout__discount--code__input--field border-radius-5" placeholder="Gift card or discount code"  type="text">
-                                    </label>
-                                    <button class="checkout__discount--code__btn primary__btn border-radius-5" type="submit">Apply</button>
-                                </form>
-                            </div>
+
                             <div class="checkout__total">
                                 <table class="checkout__total--table">
                                     <tbody class="checkout__total--body">
@@ -156,10 +149,7 @@
                                         <td class="checkout__total--title text-left">Subtotal </td>
                                         <td class="checkout__total--amount text-right">$860.00</td>
                                     </tr>
-                                    <tr class="checkout__total--items">
-                                        <td class="checkout__total--title text-left">Shipping</td>
-                                        <td class="checkout__total--calculated__text text-right">Calculated at next step</td>
-                                    </tr>
+
                                     </tbody>
                                     <tfoot class="checkout__total--footer">
                                     <tr class="checkout__total--footer__items">
@@ -172,9 +162,8 @@
                             <div class="payment__history mb-30">
                                 <h3 class="payment__history--title mb-20">Payment</h3>
                                 <ul class="payment__history--inner d-flex">
-                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Credit Card</button></li>
-                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Bank Transfer</button></li>
                                     <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">Paypal</button></li>
+                                    <li class="payment__history--list"><button class="payment__history--link primary__btn" type="submit">COD</button></li>
                                 </ul>
                             </div>
                             <button class="checkout__now--btn primary__btn" type="submit">Checkout Now</button>
