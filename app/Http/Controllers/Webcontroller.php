@@ -30,4 +30,8 @@ class Webcontroller extends Controller
     {
         return view('web.checkout');
     }
+    public function invoice()
+    {
+        return view('web.invoice');
+    }
 }
