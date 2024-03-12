@@ -25,3 +25,4 @@ Route::get('/invoice',[\App\Http\Controllers\Webcontroller::class,'invoice']);
 Route::get('/shoppingcart',[\App\Http\Controllers\Webcontroller::class,'shoppingcart']);
 Route::get('/checkout',[\App\Http\Controllers\Webcontroller::class,'checkout']);
 Route::get("/admin/dashboard",[\App\Http\Controllers\AdminController::class,'dashboard']);
+Route::get('/admin/product',[\App\Http\Controllers\AdminController::class,'product']);
