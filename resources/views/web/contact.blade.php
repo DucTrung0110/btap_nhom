@@ -150,61 +150,11 @@
     </section>
     <!-- End contact section -->
 
-    <!-- Start brand section -->
-    <div class="brand__section brand__section-two section--padding pt-0">
-        <div class="container">
-            <div class="brand__section--inner brand__logo--activation swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="brang__logo--items">
-                            <img class="brang__logo--img" src="assets/img/logo/brand-logo1.webp" alt="brand-logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brang__logo--items">
-                            <img class="brang__logo--img" src="assets/img/logo/brand-logo2.webp" alt="brand-logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brang__logo--items">
-                            <img class="brang__logo--img" src="assets/img/logo/brand-logo3.webp" alt="brand-logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brang__logo--items">
-                            <img class="brang__logo--img" src="assets/img/logo/brand-logo4.webp" alt="brand-logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brang__logo--items">
-                            <img class="brang__logo--img" src="assets/img/logo/brand-logo5.webp" alt="brand-logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brang__logo--items">
-                            <img class="brang__logo--img" src="assets/img/logo/brand-logo6.webp" alt="brand-logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brang__logo--items">
-                            <img class="brang__logo--img" src="assets/img/logo/brand-logo7.webp" alt="brand-logo">
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper__nav--btn swiper-button-next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </div>
-                <div class="swiper__nav--btn swiper-button-prev">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End brand section -->
+
 
     <!-- Start contact map area -->
     <div class="contact__map--area section--padding pt-0">
-        <iframe class="contact__map--iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7887.465355142307!2d-0.13384360843222626!3d51.4876034467734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760532743b90e1%3A0x790260718555a20c!2sU.S.%20Embassy%2C%20London!5e0!3m2!1sen!2sbd!4v1632035375945!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe class="contact__map--iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59603.41013948119!2d105.77797586953126!3d20.98409191569585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab80197b0c0b%3A0x37e09ac9b1623f5b!2zUC4gSOG7kyDEkOG6r2MgRGksIMSQ4buRbmcgxJBhLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1710253252701!5m2!1svi!2s" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <!-- End contact map area -->
 

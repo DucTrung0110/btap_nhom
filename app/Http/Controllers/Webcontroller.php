@@ -18,5 +18,8 @@ class Webcontroller extends Controller
     {
         return view('web.contact');
     }
-
+    public function dashboard()
+    {
+        return view('web.dashboard');
+    }
 }
