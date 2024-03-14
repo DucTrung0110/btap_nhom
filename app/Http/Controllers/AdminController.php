@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\Product;
 use App\Models\UserLogin;
 use Illuminate\Http\Request;
 class AdminController extends Controller
@@ -13,11 +14,17 @@ class AdminController extends Controller
     }
     public function product()
     {
-        return view('admin.web.product');
+        $product=Product::get();
+        return view('admin.web.product',[
+            'product'=>$product
+        ]);
     }
-    public function productDetail()
+    public function productDetail($id)
     {
-        return view('admin.web.productDetail');
+        $product=Product::where("id",$id)->first();
+        return view('admin.web.productDetail',[
+            'product'=>$product
+        ]);
     }
     public function productEdit()
     {
@@ -25,7 +32,38 @@ class AdminController extends Controller
     }
     public function productAdd()
     {
-        return view('admin.web.productAdd');
+        $brand= Brand::get();
+        return view('admin.web.productAdd',[
+            "brand"=>$brand
+        ]);
+    }
+    public function productSave(Request $request)
+    {
+        $request->validate([
+            'name'=>'required',
+            'images'=>'required',
+            'price'=>'required',
+            'status'=>'required',
+            'brand_id'=>'required'
+        ],[]);
+        $thumbnail = null;
+        if($request->hasFile("images")){
+            $file = $request->file("images");
+            $fileName = time().$file->getClientOriginalName();
+            $path = public_path("images/product");
+            $file->move($path,$fileName);
+            $thumbnail = "/images/product/".$fileName;
+        }
+        $product= Product::create([
+            'name'=>$request->get('name'),
+            'images'=>$thumbnail,
+            'price'=>$request->get('price'),
+            'status'=>$request->get('status'),
+            'brand_id'=>$request->get('brand_id'),
+            'description'=>$request->get('description')
+
+        ]);
+        return redirect()->to('/admin/product');
     }
     public function category()
     {
@@ -42,9 +80,12 @@ class AdminController extends Controller
     {
         return view('admin.web.orderDetail');
     }
-    public function categoryDetail()
+    public function categoryDetail($id)
     {
-        return view('admin.web.categoryDetail');
+        $brand=Brand::where("id",$id)->first();
+        return view('admin.web.categoryDetail',[
+            'brand'=>$brand
+        ]);
     }
     public function categoryAdd()
     {
@@ -111,5 +152,10 @@ class AdminController extends Controller
             'description'=>$request->get('description')
         ]);
         return redirect()->to('/admin/category');
+    }
+    public function productDelete(Product $product)
+    {
+        $product->delete();
+        return redirect()->to('/admin/product');
     }
 }

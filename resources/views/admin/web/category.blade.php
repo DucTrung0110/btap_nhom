@@ -50,7 +50,7 @@
                                     <div class="col-auto">
                                         <div class="text-lg-end my-1 my-lg-0">
                                             <button type="button" class="btn btn-success waves-effect waves-light me-1"><i class="mdi mdi-cog"></i></button>
-                                            <a href="ecommerce-product-edit.html" class="btn btn-danger waves-effect waves-light"><i class="mdi mdi-plus-circle me-1"></i> Add New</a>
+                                            <a href="/admin/categoryAdd" class="btn btn-danger waves-effect waves-light"><i class="mdi mdi-plus-circle me-1"></i> Add New</a>
                                         </div>
                                     </div><!-- end col-->
                                 </div> <!-- end row -->
@@ -77,7 +77,7 @@
                                 <div class="product-info">
                                     <div class="row align-items-center">
                                         <div class="col">
-                                            <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark">{{$b->name}}</a> </h5>
+                                            <h5 class="font-16 mt-0 sp-line-1"><a href="{{url("/admin/categoryDetail",["brand"=>$b->id])}}" class="text-dark">{{$b->name}}</a> </h5>
 
                                         </div>
 

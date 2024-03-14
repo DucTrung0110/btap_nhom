@@ -14,7 +14,8 @@ class Product extends Model
         'images',
         'description',
         'price',
-        'brand_id'
+        'brand_id',
+        'status'
     ];
     public function products()
     {

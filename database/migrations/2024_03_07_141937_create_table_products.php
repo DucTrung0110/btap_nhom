@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string("images");
             $table->unsignedDecimal("price");
             $table->text("description");
+            $table->unsignedTinyInteger('status');
             $table->unsignedBigInteger("brand_id");
             $table->foreign("brand_id")->references("id")->on("brands");
             $table->timestamps();

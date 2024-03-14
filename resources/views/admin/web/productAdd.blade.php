@@ -25,8 +25,8 @@
                     </div>
                 </div>
                 <!-- end page title -->
-
-
+                <form action="/admin/productAdd" method="post" enctype="multipart/form-data">
+@csrf
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="card">
@@ -35,45 +35,28 @@
 
                                 <div class="mb-3">
                                     <label for="product-name" class="form-label">Product Name <span class="text-danger">*</span></label>
-                                    <input type="text" id="product-name" class="form-control" placeholder="e.g : Apple iMac">
+                                    <input type="text" name="name" id="product-name" class="form-control" placeholder="e.g : Apple iMac">
                                 </div>
 
 
 
                                 <div class="mb-3">
                                     <label for="product-summary" class="form-label">Product Description</label>
-                                    <textarea class="form-control" id="product-summary" rows="3" placeholder="Please enter summary"></textarea>
+                                    <textarea class="form-control" name="description" id="product-summary" rows="3" placeholder="Please enter summary"></textarea>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="product-category" class="form-label">Categories <span class="text-danger">*</span></label>
-                                    <select class="form-control select2" id="product-category">
-                                        <option>Select</option>
-                                        <optgroup label="Shopping">
-                                            <option value="SH1">Shopping 1</option>
-                                            <option value="SH2">Shopping 2</option>
-                                            <option value="SH3">Shopping 3</option>
-                                            <option value="SH4">Shopping 4</option>
-                                        </optgroup>
-                                        <optgroup label="CRM">
-                                            <option value="CRM1">Crm 1</option>
-                                            <option value="CRM2">Crm 2</option>
-                                            <option value="CRM3">Crm 3</option>
-                                            <option value="CRM4">Crm 4</option>
-                                        </optgroup>
-                                        <optgroup label="eCommerce">
-                                            <option value="E1">eCommerce 1</option>
-                                            <option value="E2">eCommerce 2</option>
-                                            <option value="E3">eCommerce 3</option>
-                                            <option value="E4">eCommerce 4</option>
-                                        </optgroup>
-
+                                    <select name="brand_id" class="form-control select2" id="product-category">
+                                        @foreach($brand as $b)
+                                        <option value="{{$b->id}}">{{$b->name}}</option>
+                                            @endforeach
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="product-price">Price <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="product-price" placeholder="Enter amount">
+                                    <input type="number" name="price" class="form-control" id="product-price" placeholder="Enter amount">
                                 </div>
 
                                 <div class="mb-3">
@@ -81,16 +64,12 @@
                                     <br/>
                                     <div class="d-flex flex-wrap">
                                         <div class="form-check me-2">
-                                            <input class="form-check-input" type="radio" name="radioInline" value="option1" id="inlineRadio1" checked>
-                                            <label class="form-check-label" for="inlineRadio1">Online</label>
+                                            <input class="form-check-input" type="radio" name="status" value="1" id="inlineRadio1" checked>
+                                            <label class="form-check-label" for="inlineRadio1">In stock</label>
                                         </div>
                                         <div class="form-check me-2">
-                                            <input class="form-check-input" type="radio" name="radioInline" value="option2" id="inlineRadio2">
-                                            <label class="form-check-label" for="inlineRadio2">Offline</label>
-                                        </div>
-                                        <div class="form-check me-2">
-                                            <input class="form-check-input" type="radio" name="radioInline" value="option3" id="inlineRadio3">
-                                            <label class="form-check-label" for="inlineRadio3">Draft</label>
+                                            <input class="form-check-input" type="radio" name="status" value="2" id="inlineRadio2">
+                                            <label class="form-check-label" for="inlineRadio2">Out of stock</label>
                                         </div>
                                     </div>
                                 </div>
@@ -106,10 +85,8 @@
                             <div class="card-body">
                                 <h5 class="text-uppercase mt-0 mb-3 bg-light p-2">Product Images</h5>
 
-                                <form action="https://coderthemes.com/" method="post" class="dropzone" id="myAwesomeDropzone" data-plugin="dropzone" data-previews-container="#file-previews"
-                                      data-upload-preview-template="#uploadPreviewTemplate">
                                     <div class="fallback">
-                                        <input name="file" type="file" multiple />
+                                        <input name="images" type="file" multiple />
                                     </div>
 
                                     <div class="dz-message needsclick">
@@ -118,7 +95,6 @@
                                         <span class="text-muted font-13">(This is just a demo dropzone. Selected files are
                                                     <strong>not</strong> actually uploaded.)</span>
                                     </div>
-                                </form>
 
                                 <!-- Preview -->
                                 <div class="dropzone-previews mt-3" id="file-previews"></div>
@@ -135,12 +111,12 @@
                     <div class="col-12">
                         <div class="text-center mb-3">
                             <button type="button" class="btn w-sm btn-light waves-effect">Cancel</button>
-                            <button type="button" class="btn w-sm btn-success waves-effect waves-light">Save</button>
+                            <button type="submit" class="btn w-sm btn-success waves-effect waves-light">Save</button>
                         </div>
                     </div> <!-- end col -->
                 </div>
                 <!-- end row -->
-
+                </form>
 
                 <!-- file preview template -->
                 <div class="d-none" id="uploadPreviewTemplate">

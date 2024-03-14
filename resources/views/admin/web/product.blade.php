@@ -63,34 +63,28 @@
                 <!-- end row-->
 
                 <div class="row">
+                    @foreach($product as $b)
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="card product-box">
                             <div class="card-body">
                                 <div class="product-action">
                                     <a href="javascript: void(0);" class="btn btn-success btn-xs waves-effect waves-light"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="javascript: void(0);" class="btn btn-danger btn-xs waves-effect waves-light"><i class="mdi mdi-close"></i></a>
+                                    <a href="{{url("/admin/productDelete",["product"=>$b->id])}}" class="btn btn-danger btn-xs waves-effect waves-light"><i class="mdi mdi-close"></i></a>
                                 </div>
 
                                 <div class="bg-light">
-                                    <img src="assets/images/products/product-1.png" alt="product-pic" class="img-fluid" />
+                                    <img src="{{$b->images}}" alt="product-pic" class="img-fluid" />
                                 </div>
 
                                 <div class="product-info">
                                     <div class="row align-items-center">
                                         <div class="col">
-                                            <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark">Jones Men's T-shirt (Blue)</a> </h5>
-                                            <div class="text-warning mb-2 font-13">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
+                                            <h5 class="font-16 mt-0 sp-line-1"><a href="{{url("/admin/productDetail",["product"=>$b->id])}}" class="text-dark">{{$b->name}}</a> </h5>
                                             <h5 class="m-0"> <span class="text-muted"> Stocks : 98 pcs</span></h5>
                                         </div>
                                         <div class="col-auto">
                                             <div class="product-price-tag">
-                                                $39
+                                                ${{$b->price}}
                                             </div>
                                         </div>
                                     </div> <!-- end row -->
@@ -98,258 +92,8 @@
                             </div>
                         </div> <!-- end card-->
                     </div> <!-- end col-->
+                    @endforeach
 
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="card product-box">
-                            <div class="card-body">
-                                <div class="product-action">
-                                    <a href="javascript: void(0);" class="btn btn-success btn-xs waves-effect waves-light"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="javascript: void(0);" class="btn btn-danger btn-xs waves-effect waves-light"><i class="mdi mdi-close"></i></a>
-                                </div>
-
-                                <div class="bg-light">
-                                    <img src="assets/images/products/product-2.png" alt="product-pic" class="img-fluid" />
-                                </div>
-
-                                <div class="product-info">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark">Brown Hoodie for men</a> </h5>
-                                            <div class="text-warning mb-2 font-13">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <h5 class="m-0"> <span class="text-muted"> Stocks : 23 pcs</span></h5>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="product-price-tag">
-                                                $98
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row -->
-                                </div> <!-- end product info-->
-                            </div>
-                        </div> <!-- end card-->
-                    </div> <!-- end col-->
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="card product-box">
-                            <div class="card-body">
-                                <div class="product-action">
-                                    <a href="javascript: void(0);" class="btn btn-success btn-xs waves-effect waves-light"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="javascript: void(0);" class="btn btn-danger btn-xs waves-effect waves-light"><i class="mdi mdi-close"></i></a>
-                                </div>
-
-                                <div class="bg-light">
-                                    <img src="assets/images/products/product-3.png" alt="product-pic" class="img-fluid" />
-                                </div>
-
-                                <div class="product-info">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark">Designer Awesome T-Shirt</a> </h5>
-                                            <div class="text-warning mb-2 font-13">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <h5 class="m-0"> <span class="text-muted"> Stocks : 235 pcs</span></h5>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="product-price-tag">
-                                                $49
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row -->
-                                </div> <!-- end product info-->
-                            </div>
-                        </div> <!-- end card-->
-                    </div> <!-- end col-->
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="card product-box">
-                            <div class="card-body">
-                                <div class="product-action">
-                                    <a href="javascript: void(0);" class="btn btn-success btn-xs waves-effect waves-light"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="javascript: void(0);" class="btn btn-danger btn-xs waves-effect waves-light"><i class="mdi mdi-close"></i></a>
-                                </div>
-
-                                <div class="bg-light">
-                                    <img src="assets/images/products/product-4.png" alt="product-pic" class="img-fluid" />
-                                </div>
-
-                                <div class="product-info">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark">Jones Awesome T-Shirt</a> </h5>
-                                            <div class="text-warning mb-2 font-13">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <h5 class="m-0"> <span class="text-muted"> Stocks : 385 pcs</span></h5>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="product-price-tag">
-                                                $29
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row -->
-                                </div> <!-- end product info-->
-                            </div>
-                        </div> <!-- end card-->
-                    </div> <!-- end col-->
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="card product-box">
-                            <div class="card-body">
-                                <div class="product-action">
-                                    <a href="javascript: void(0);" class="btn btn-success btn-xs waves-effect waves-light"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="javascript: void(0);" class="btn btn-danger btn-xs waves-effect waves-light"><i class="mdi mdi-close"></i></a>
-                                </div>
-
-                                <div class="bg-light">
-                                    <img src="assets/images/products/product-5.png" alt="product-pic" class="img-fluid" />
-                                </div>
-
-                                <div class="product-info">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark">Green Hoodie for men</a> </h5>
-                                            <div class="text-warning mb-2 font-13">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <h5 class="m-0"> <span class="text-muted"> Stocks : 25 pcs</span></h5>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="product-price-tag">
-                                                $49
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row -->
-                                </div> <!-- end product info-->
-                            </div>
-                        </div> <!-- end card-->
-                    </div> <!-- end col-->
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="card product-box">
-                            <div class="card-body">
-                                <div class="product-action">
-                                    <a href="javascript: void(0);" class="btn btn-success btn-xs waves-effect waves-light"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="javascript: void(0);" class="btn btn-danger btn-xs waves-effect waves-light"><i class="mdi mdi-close"></i></a>
-                                </div>
-
-                                <div class="bg-light">
-                                    <img src="assets/images/products/product-6.png" alt="product-pic" class="img-fluid" />
-                                </div>
-
-                                <div class="product-info">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark">Blue Awesome T-Shirt</a> </h5>
-                                            <div class="text-warning mb-2 font-13">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <h5 class="m-0"> <span class="text-muted"> Stocks : 39 pcs</span></h5>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="product-price-tag">
-                                                $19
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row -->
-                                </div> <!-- end product info-->
-                            </div>
-                        </div> <!-- end card-->
-                    </div> <!-- end col-->
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="card product-box">
-                            <div class="card-body">
-                                <div class="product-action">
-                                    <a href="javascript: void(0);" class="btn btn-success btn-xs waves-effect waves-light"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="javascript: void(0);" class="btn btn-danger btn-xs waves-effect waves-light"><i class="mdi mdi-close"></i></a>
-                                </div>
-
-                                <div class="bg-light">
-                                    <img src="assets/images/products/product-7.png" alt="product-pic" class="img-fluid" />
-                                </div>
-
-                                <div class="product-info">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark">Jones Men's T-shirt (Green)</a> </h5>
-                                            <div class="text-warning mb-2 font-13">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <h5 class="m-0"> <span class="text-muted"> Stocks : 36 pcs</span></h5>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="product-price-tag">
-                                                $99
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row -->
-                                </div> <!-- end product info-->
-                            </div>
-                        </div> <!-- end card-->
-                    </div> <!-- end col-->
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="card product-box">
-                            <div class="card-body">
-                                <div class="product-action">
-                                    <a href="javascript: void(0);" class="btn btn-success btn-xs waves-effect waves-light"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="javascript: void(0);" class="btn btn-danger btn-xs waves-effect waves-light"><i class="mdi mdi-close"></i></a>
-                                </div>
-
-                                <div class="bg-light">
-                                    <img src="assets/images/products/product-8.png" alt="product-pic" class="img-fluid" />
-                                </div>
-
-                                <div class="product-info">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark">Red Hoodie for men</a> </h5>
-                                            <div class="text-warning mb-2 font-13">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <h5 class="m-0"> <span class="text-muted"> Stocks : 128 pcs</span></h5>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="product-price-tag">
-                                                $29
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row -->
-                                </div> <!-- end product info-->
-                            </div>
-                        </div> <!-- end card-->
-                    </div> <!-- end col-->
                 </div>
                 <!-- end row-->
 

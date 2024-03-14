@@ -27,11 +27,11 @@ Route::get('/checkout',[\App\Http\Controllers\Webcontroller::class,'checkout']);
 Route::prefix("/admin")->middleware(["auth","admin"])->group(function () {
 Route::get("/dashboard",[\App\Http\Controllers\AdminController::class,'dashboard']);
 Route::get('/product',[\App\Http\Controllers\AdminController::class,'product']);
-Route::get('/productDetail',[\App\Http\Controllers\AdminController::class,'productDetail']);
+Route::get('/productDetail/{product}',[\App\Http\Controllers\AdminController::class,'productDetail']);
 Route::get('/productEdit',[\App\Http\Controllers\AdminController::class,'productEdit']);
 Route::get('/productAdd',[\App\Http\Controllers\AdminController::class,'productAdd']);
 Route::get('/category',[\App\Http\Controllers\AdminController::class,'category']);
-Route::get('/categoryDetail',[\App\Http\Controllers\AdminController::class,'categoryDetail']);
+Route::get('/categoryDetail/{brand}',[\App\Http\Controllers\AdminController::class,'categoryDetail']);
 Route::get('/order',[\App\Http\Controllers\AdminController::class,'order']);
 Route::get('orderDetail',[\App\Http\Controllers\AdminController::class,'orderDetail']);
 Route::get('/categoryAdd',[\App\Http\Controllers\AdminController::class,'categoryAdd']);
@@ -39,4 +39,7 @@ Route::get('/categoryEdit/{brand}',[\App\Http\Controllers\AdminController::class
 Route::post('/categoryAdd',[\App\Http\Controllers\AdminController::class,'categorySave']);
 Route::get('/categoryDelete/{brand}',[\App\Http\Controllers\AdminController::class,'categoryDelete']);
 Route::put('/categoryUpdated/{brand}',[\App\Http\Controllers\AdminController::class,'categoryUpdated']);
+Route::post('/productAdd',[\App\Http\Controllers\AdminController::class,'productSave']);
+Route::get('/productDelete/{product}',[\App\Http\Controllers\AdminController::class,'productDelete']);
+Route::get('/productDetail/{product}',[\App\Http\Controllers\AdminController::class,'productDetail']);
 });
