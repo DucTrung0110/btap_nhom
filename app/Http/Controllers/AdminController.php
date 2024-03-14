@@ -23,7 +23,7 @@ class AdminController extends Controller
     {
         $product=Product::where("id",$id)->first();
         return view('admin.web.productDetail',[
-            'product'=>$product
+            'product'=>$product,
         ]);
     }
     public function productEdit()
