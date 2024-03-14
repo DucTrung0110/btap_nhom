@@ -26,9 +26,14 @@ class AdminController extends Controller
             'product'=>$product,
         ]);
     }
-    public function productEdit()
+    public function productEdit($id)
     {
-        return view('admin.web.productEdit');
+        $product=Product::where("id",$id)->first();
+        $brand=Brand::get();
+        return view('admin.web.productEdit',[
+            "product"=>$product,
+            'brand'=>$brand
+        ]);
     }
     public function productAdd()
     {
@@ -156,6 +161,34 @@ class AdminController extends Controller
     public function productDelete(Product $product)
     {
         $product->delete();
+        return redirect()->to('/admin/product');
+    }
+    public function productUpdated(Request $request,$id)
+    {
+        $request->validate([
+            'name'=>'required',
+            'images'=>'required',
+            'price'=>'required',
+            'status'=>'required',
+            'brand_id'=>'required'
+        ],[]);
+        $thumbnail = null;
+        if($request->hasFile("images")){
+            $file = $request->file("images");
+            $fileName = time().$file->getClientOriginalName();
+            $path = public_path("images/product");
+            $file->move($path,$fileName);
+            $thumbnail = "/images/product/".$fileName;
+        }
+        $product= Product::where("id",$id)->update([
+            'name'=>$request->get('name'),
+            'images'=>$thumbnail,
+            'price'=>$request->get('price'),
+            'status'=>$request->get('status'),
+            'brand_id'=>$request->get('brand_id'),
+            'description'=>$request->get('description')
+
+        ]);
         return redirect()->to('/admin/product');
     }
 }

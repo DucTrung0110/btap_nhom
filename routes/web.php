@@ -28,7 +28,7 @@ Route::prefix("/admin")->middleware(["auth","admin"])->group(function () {
 Route::get("/dashboard",[\App\Http\Controllers\AdminController::class,'dashboard']);
 Route::get('/product',[\App\Http\Controllers\AdminController::class,'product']);
 Route::get('/productDetail/{product}',[\App\Http\Controllers\AdminController::class,'productDetail']);
-Route::get('/productEdit',[\App\Http\Controllers\AdminController::class,'productEdit']);
+Route::get('/productEdit/{product}',[\App\Http\Controllers\AdminController::class,'productEdit']);
 Route::get('/productAdd',[\App\Http\Controllers\AdminController::class,'productAdd']);
 Route::get('/category',[\App\Http\Controllers\AdminController::class,'category']);
 Route::get('/categoryDetail/{brand}',[\App\Http\Controllers\AdminController::class,'categoryDetail']);
@@ -42,4 +42,5 @@ Route::put('/categoryUpdated/{brand}',[\App\Http\Controllers\AdminController::cl
 Route::post('/productAdd',[\App\Http\Controllers\AdminController::class,'productSave']);
 Route::get('/productDelete/{product}',[\App\Http\Controllers\AdminController::class,'productDelete']);
 Route::get('/productDetail/{product}',[\App\Http\Controllers\AdminController::class,'productDetail']);
+Route::put('/productUpdated/{product}',[\App\Http\Controllers\AdminController::class,'productUpdated']);
 });
