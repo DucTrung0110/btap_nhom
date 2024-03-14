@@ -56,9 +56,9 @@
 
 
                                             <div>
-                                                <button type="button" class="btn btn-success waves-effect waves-light">
-                                                    <span class="btn-label"><i class="mdi mdi-cart"></i></span>Edit
-                                                </button>
+                                                <a href="{{url("/admin/productEdit",["product"=>$product->id])}}" class="btn btn-success waves-effect waves-light">
+                                                    <span class="btn-label"><i class="fas fa-pen"></i></span>Edit
+                                                </a>
                                             </div>
                                         </div>
                                     </div> <!-- end col -->

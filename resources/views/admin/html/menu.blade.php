@@ -3,13 +3,13 @@
     <!-- Brand Logo -->
     <div class="logo-box">
         <!-- Brand Logo Light -->
-        <a href="index.html" class="logo-light">
+        <a href="/admin/dashboard" class="logo-light">
             <img src="images/logo-light.png" alt="logo" class="logo-lg">
             <img src="images/logo-sm.png" alt="small logo" class="logo-sm">
         </a>
 
         <!-- Brand Logo Dark -->
-        <a href="index.html" class="logo-dark">
+        <a href="/admin/dashboard" class="logo-dark">
             <img src="images/logo-dark.png" alt="dark logo" class="logo-lg">
             <img src="images/logo-sm.png" alt="small logo" class="logo-sm">
         </a>

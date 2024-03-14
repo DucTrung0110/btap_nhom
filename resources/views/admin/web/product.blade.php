@@ -51,8 +51,8 @@
                                     </div>
                                     <div class="col-auto">
                                         <div class="text-lg-end my-1 my-lg-0">
-                                            <button type="button" class="btn btn-success waves-effect waves-light me-1"><i class="mdi mdi-cog"></i></button>
-                                            <a href="ecommerce-product-edit.html" class="btn btn-danger waves-effect waves-light"><i class="mdi mdi-plus-circle me-1"></i> Add New</a>
+                                            <button type="button" class="btn btn-success waves-effect waves-light me-1"><i class="fas fa-search"></i></button>
+                                            <a href="/admin/productAdd" class="btn btn-danger waves-effect waves-light"><i class="fas fa-plus-circle"></i> Add New</a>
                                         </div>
                                     </div><!-- end col-->
                                 </div> <!-- end row -->
@@ -68,8 +68,8 @@
                         <div class="card product-box">
                             <div class="card-body">
                                 <div class="product-action">
-                                    <a href="javascript: void(0);" class="btn btn-success btn-xs waves-effect waves-light"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="{{url("/admin/productDelete",["product"=>$b->id])}}" class="btn btn-danger btn-xs waves-effect waves-light"><i class="mdi mdi-close"></i></a>
+                                    <a href="{{url("/admin/productEdit",["product"=>$b->id])}}" class="btn btn-success btn-xs waves-effect waves-light"><i class="fas fa-pen"></i></a>
+                                    <a href="{{url("/admin/productDelete",["product"=>$b->id])}}" class="btn btn-danger btn-xs waves-effect waves-light"><i class="fas fa-trash"></i></a>
                                 </div>
 
                                 <div class="bg-light">
