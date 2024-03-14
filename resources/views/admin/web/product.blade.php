@@ -80,7 +80,11 @@
                                     <div class="row align-items-center">
                                         <div class="col">
                                             <h5 class="font-16 mt-0 sp-line-1"><a href="{{url("/admin/productDetail",["product"=>$b->id])}}" class="text-dark">{{$b->name}}</a> </h5>
-                                            <h5 class="m-0"> <span class="text-muted"> Stocks : 98 pcs</span></h5>
+                                            @if($b->status == 1)
+                                                <h4><span class="badge bg-soft-success text-success mb-4">Instock</span></h4>
+                                            @elseif($b->status == 2)
+                                                <h4><span class="badge bg-soft-danger text-danger mb-4">Out of Stock</span></h4>
+                                            @endif
                                         </div>
                                         <div class="col-auto">
                                             <div class="product-price-tag">
