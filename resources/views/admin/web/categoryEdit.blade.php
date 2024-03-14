@@ -17,10 +17,10 @@
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Ecommerce</a></li>
-                                    <li class="breadcrumb-item active">Add Product</li>
+                                    <li class="breadcrumb-item active">Edit Category</li>
                                 </ol>
                             </div>
-                            <h4 class="page-title">Add Category</h4>
+                            <h4 class="page-title">Edit Category</h4>
                         </div>
                     </div>
                 </div>
@@ -37,14 +37,14 @@
 
                                     <div class="mb-3">
                                         <label for="product-name" class="form-label">Brand Name <span class="text-danger">*</span></label>
-                                        <input name="name" type="text" id="product-name" class="form-control" placeholder="e.g : Jean Paul Gaultier">
+                                        <input value="{{$brand->name}}" name="name" type="text" id="product-name" class="form-control" placeholder="e.g : Jean Paul Gaultier">
                                     </div>
 
 
 
                                     <div class="mb-3">
                                         <label for="product-summary" class="form-label">Brand Description</label>
-                                        <input name="description" class="form-control" id="product-summary" rows="3" placeholder="Please enter summary">
+                                        <input value="{{$brand->description}}" name="description" class="form-control" id="product-summary" rows="3" placeholder="Please enter summary">
                                     </div>
 
 
