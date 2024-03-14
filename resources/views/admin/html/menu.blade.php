@@ -79,7 +79,7 @@
             </li>
 
             <li class="menu-item">
-                <a href="/admin/" class="menu-link">
+                <a href="/admin/product" class="menu-link">
                     <span class="menu-icon"><i class="fas fa-store"></i></span>
                     <span class="menu-text"> Product </span>
                 </a>
@@ -87,7 +87,7 @@
             </li>
 
             <li class="menu-item">
-                <a href="/admin/categoryAdd" class="menu-link">
+                <a href="/admin/productAdd" class="menu-link">
                     <span class="menu-icon"><i class="fas fa-plus-circle"></i></span>
                     <span class="menu-text"> Add Product </span>
                 </a>
