@@ -33,17 +33,9 @@
 
                                         <div class="tab-content pt-0">
                                             <div class="tab-pane active show" id="product-1-item">
-                                                <img src="assets/images/products/product-9.jpg" alt="" class="img-fluid mx-auto d-block rounded">
+                                                <img src='{{$product->images}}' alt="" class="img-fluid mx-auto d-block rounded">
                                             </div>
-                                            <div class="tab-pane" id="product-2-item">
-                                                <img src="assets/images/products/product-10.jpg" alt="" class="img-fluid mx-auto d-block rounded">
-                                            </div>
-                                            <div class="tab-pane" id="product-3-item">
-                                                <img src="assets/images/products/product-11.jpg" alt="" class="img-fluid mx-auto d-block rounded">
-                                            </div>
-                                            <div class="tab-pane" id="product-4-item">
-                                                <img src="assets/images/products/product-12.jpg" alt="" class="img-fluid mx-auto d-block rounded">
-                                            </div>
+
                                         </div>
 
 
@@ -51,17 +43,16 @@
                                     <div class="col-lg-7">
                                         <div class="ps-xl-3 mt-3 mt-xl-0">
                                             <a href="#" class="text-primary">{{$product->products->name}}</a>
-                                            <h4 class="mb-3">Jack & Jones Men's T-shirt (Blue)</h4>
+                                            <h4 class="mb-3">{{$product->name}}</h4>
 
 
-                                            <h4 class="mb-4">Price : <span class="text-muted me-2"><del>$80 USD</del></span> <b>$64 USD</b></h4>
+                                            <h4 class="mb-4">Price : <span class="text-muted me-2"></span> <b>${{$product->price}} USD</b></h4>
                                             @if($product->status == 1)
                                                 <h4><span class="badge bg-soft-success text-success mb-4">Instock</span></h4>
                                             @elseif($product->status == 2)
                                                 <h4><span class="badge bg-soft-danger text-danger mb-4">Out of Stock</span></h4>
                                             @endif
-                                            <p class="text-muted mb-4">The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.</p>
-
+                                            <p class="text-muted mb-4">{{$product->description}}</p>
 
 
                                             <div>
