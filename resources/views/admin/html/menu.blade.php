@@ -94,7 +94,7 @@
             </li>
 
             <li class="menu-item">
-                <a href="/admin/" class="menu-link">
+                <a href="/admin/order" class="menu-link">
                     <span class="menu-icon"><i class="fas fa-shopping-cart"></i></span>
                     <span class="menu-text"> Order </span>
                 </a>

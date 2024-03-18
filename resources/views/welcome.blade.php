@@ -91,67 +91,19 @@
                 </div>
                 <div class="shop__collection--column5 swiper">
                     <div class="swiper-wrapper">
+                        @foreach($product as $w)
                         <div class="swiper-slide">
                             <div class="shop__collection--card text-center">
                                 <a class="shop__collection--link" href="shop.html">
-                                    <img class="shop__collection--img" src="assets/img/collection/collection1.webp" alt="icon-img">
-                                    <h3 class="shop__collection--title">Vitamins & Health</h3>
+                                    <img style="width: 240px; border-radius: 210px" class="shop__collection--img" src="{{$w->images}}" alt="icon-img">
+                                    <h3 class="shop__collection--title">{{$w->name}}</h3>
                                     <span class="shop__collection--subtitle">25 Items</span>
                                 </a>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="shop__collection--card text-center">
-                                <a class="shop__collection--link" href="shop.html">
-                                    <img class="shop__collection--img" src="assets/img/collection/collection2.webp" alt="icon-img">
-                                    <h3 class="shop__collection--title">Vitamins & Health</h3>
-                                    <span class="shop__collection--subtitle">25 Items</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="shop__collection--card text-center">
-                                <a class="shop__collection--link" href="shop.html">
-                                    <img class="shop__collection--img" src="assets/img/collection/collection3.webp" alt="icon-img">
-                                    <h3 class="shop__collection--title">Vitamins & Health</h3>
-                                    <span class="shop__collection--subtitle">25 Items</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="shop__collection--card text-center">
-                                <a class="shop__collection--link" href="shop.html">
-                                    <img class="shop__collection--img" src="assets/img/collection/collection4.webp" alt="icon-img">
-                                    <h3 class="shop__collection--title">Vitamins & Health</h3>
-                                    <span class="shop__collection--subtitle">25 Items</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="shop__collection--card text-center">
-                                <a class="shop__collection--link" href="shop.html">
-                                    <img class="shop__collection--img" src="assets/img/collection/collection5.webp" alt="icon-img">
-                                    <h3 class="shop__collection--title">Vitamins & Health</h3>
-                                    <span class="shop__collection--subtitle">25 Items</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="shop__collection--card text-center">
-                                <a class="shop__collection--link" href="shop.html">
-                                    <img class="shop__collection--img" src="assets/img/collection/collection2.webp" alt="icon-img">
-                                    <h3 class="shop__collection--title">Vitamins & Health</h3>
-                                    <span class="shop__collection--subtitle">25 Items</span>
-                                </a>
-                            </div>
-                        </div>
+                            @endforeach
                     </div>
-                    <div class="swiper__nav--btn swiper-button-next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                    </div>
-                    <div class="swiper__nav--btn swiper-button-prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </div>
+
                 </div>
             </div>
         </section>

@@ -33,14 +33,11 @@
                                     <div class="col-lg-6">
                                         <div class="mb-4">
                                             <h5 class="mt-0">Order ID:</h5>
-                                            <p>#VL2537</p>
+                                            <p>{{$order->id}}</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <div class="mb-4">
-                                            <h5 class="mt-0">Tracking ID:</h5>
-                                            <p>894152012012</p>
-                                        </div>
+
                                     </div>
                                 </div>
 
@@ -64,7 +61,7 @@
                     <div class="col-lg-8">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title mb-3">Items from Order #VL2537</h4>
+                                <h4 class="header-title mb-3">Items from Order {{$order->id}}</h4>
 
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-centered mb-0">
@@ -79,16 +76,16 @@
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <th scope="row">Polo Navy blue T-shirt</th>
-                                            <td><img src="assets/images/products/product-1.png" alt="product-img" height="32"></td>
+                                            <th scope="row">{{$order->product->name}}</th>
+                                            <td><img src="{{$order->product->images}}" alt="product-img" height="32"></td>
                                             <td>1</td>
-                                            <td>$39</td>
-                                            <td>$39</td>
+                                            <td>${{$order->product->price}}</td>
+                                            <td>${{$order->product->price}}</td>
                                         </tr>
 
                                         <tr>
                                             <th scope="row" colspan="4" class="text-end">Total :</th>
-                                            <td><div class="fw-bold">$213</div></td>
+                                            <td><div class="fw-bold">${{$order->totalphp}}</div></td>
                                         </tr>
 
                                         </tbody>

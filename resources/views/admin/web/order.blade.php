@@ -77,6 +77,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach($order as $o)
                                         <tr>
                                             <td>
                                                 <div class="form-check">
@@ -84,89 +85,31 @@
                                                     <label class="form-check-label" for="customCheck2">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-order-detail.html" class="text-body fw-bold">#UB9708</a> </td>
+                                            <td><a href="{{url("/admin/orderDetail",["order"=>$o->id])}}" class="text-body fw-bold">{{$o->id}}</a> </td>
                                             <td>
-                                                <a href="ecommerce-product-detail.html"><img src="assets/images/products/product-1.png" alt="product-img" height="32" /></a>
-                                                <a href="ecommerce-product-detail.html"><img src="assets/images/products/product-2.png" alt="product-img" height="32" /></a>
+                                                <a href="ecommerce-product-detail.html"><img src="{{$o->product->images}}" alt="product-img" height="32" /></a>
                                             </td>
                                             <td>
-                                                August 05 2018 <small class="text-muted">10:29 PM</small>
+                                               {{$o->date}}
                                             </td>
 
                                             <td>
-                                                $176.41
+                                                {{$o->total}}
                                             </td>
                                             <td>
-                                                Mastercard
+                                                {{$o->payment_method}}
                                             </td>
                                             <td>
                                                 <h5><span class="badge bg-info">Shipped</span></h5>
                                             </td>
                                             <td>
-                                                <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                <a href="javascript:void(0);" class="action-icon"> <i class="fas fa-eye"></i></a>
+                                                <a href="javascript:void(0);" class="action-icon"> <i class="fas fa-pen"></i></a>
+                                                <a href="javascript:void(0);" class="action-icon"> <i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
 
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="customCheck3">
-                                                    <label class="form-check-label" for="customCheck3">&nbsp;</label>
-                                                </div>
-                                            </td>
-                                            <td><a href="ecommerce-order-detail.html" class="text-body fw-bold">#UB9707</a> </td>
-                                            <td>
-                                                <a href="ecommerce-product-detail.html"><img src="assets/images/products/product-3.png" alt="product-img" height="32" /></a>
-                                                <a href="ecommerce-product-detail.html"><img src="assets/images/products/product-4.png" alt="product-img" height="32" /></a>
-                                                <a href="ecommerce-product-detail.html"><img src="assets/images/products/product-5.png" alt="product-img" height="32" /></a>
-                                            </td>
-                                            <td>August 04 2018 <small class="text-muted">08:18 AM</small></td>
-
-                                            <td>
-                                                $1,458.65
-                                            </td>
-                                            <td>
-                                                Visa
-                                            </td>
-                                            <td>
-                                                <h5><span class="badge bg-warning">Processing</span></h5>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="customCheck4">
-                                                    <label class="form-check-label" for="customCheck4">&nbsp;</label>
-                                                </div>
-                                            </td>
-                                            <td><a href="ecommerce-order-detail.html" class="text-body fw-bold">#UB9706</a> </td>
-                                            <td>
-                                                <a href="ecommerce-product-detail.html"><img src="assets/images/products/product-7.png" alt="product-img" height="32" /></a>
-                                            </td>
-                                            <td>August 04 2018 <small class="text-muted">10:29 PM</small></td>
-
-                                            <td>
-                                                $801.99
-                                            </td>
-                                            <td>
-                                                Credit Card
-                                            </td>
-                                            <td>
-                                                <h5><span class="badge bg-warning">Processing</span></h5>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                            </td>
-                                        </tr>
+                                        @endforeach
 
 
 
