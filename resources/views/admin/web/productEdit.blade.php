@@ -36,28 +36,29 @@
 
                                     <div class="mb-3">
                                         <label for="product-name" class="form-label">Product Name <span class="text-danger">*</span></label>
-                                        <input type="text" name="name" id="product-name" class="form-control" placeholder="e.g : Apple iMac">
+                                        <input value="{{$product->name}}" type="text" name="name" id="product-name" class="form-control" placeholder="e.g : Apple iMac">
                                     </div>
 
 
 
                                     <div class="mb-3">
                                         <label for="product-summary" class="form-label">Product Description</label>
-                                        <textarea class="form-control" name="description" id="product-summary" rows="3" placeholder="Please enter summary"></textarea>
+                                        <textarea class="form-control" name="description" id="product-summary" rows="3" placeholder="Please enter summary">{{$product->description}}</textarea>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="product-category" class="form-label">Categories <span class="text-danger">*</span></label>
                                         <select name="brand_id" class="form-control select2" id="product-category">
                                             @foreach($brand as $b)
-                                                <option value="{{$b->id}}">{{$b->name}}</option>
+                                                <option value="{{$b->id}}" @if($b->id == $product->brand_id) selected @endif>{{$b->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
 
+
                                     <div class="mb-3">
                                         <label for="product-price">Price <span class="text-danger">*</span></label>
-                                        <input type="number" name="price" class="form-control" id="product-price" placeholder="Enter amount">
+                                        <input value="{{$product->price}}" type="number" name="price" class="form-control" id="product-price" placeholder="Enter amount">
                                     </div>
 
                                     <div class="mb-3">
