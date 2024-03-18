@@ -33,7 +33,7 @@ Route::get('/productAdd',[\App\Http\Controllers\AdminController::class,'productA
 Route::get('/category',[\App\Http\Controllers\AdminController::class,'category']);
 Route::get('/categoryDetail/{brand}',[\App\Http\Controllers\AdminController::class,'categoryDetail']);
 Route::get('/order',[\App\Http\Controllers\AdminController::class,'order']);
-Route::get('orderDetail',[\App\Http\Controllers\AdminController::class,'orderDetail']);
+Route::get('orderDetail/{order}',[\App\Http\Controllers\AdminController::class,'orderDetail']);
 Route::get('/categoryAdd',[\App\Http\Controllers\AdminController::class,'categoryAdd']);
 Route::get('/categoryEdit/{brand}',[\App\Http\Controllers\AdminController::class,'categoryEdit']);
 Route::post('/categoryAdd',[\App\Http\Controllers\AdminController::class,'categorySave']);

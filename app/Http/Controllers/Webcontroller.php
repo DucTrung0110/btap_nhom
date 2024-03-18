@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\UserLogin;
 use Illuminate\Http\Request;
 class Webcontroller extends Controller
 {
     public function home()
     {
-      return view('welcome');
+        $product=Product::get();
+        return view('welcome',[
+            'product'=>$product
+        ]);
     }
     public function la()
     {

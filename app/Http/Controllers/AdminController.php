@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\UserLogin;
 use Illuminate\Http\Request;
@@ -79,12 +80,17 @@ class AdminController extends Controller
     }
     public function order()
     {
-        return view('admin.web.order');
+        $order=Order::get();
+        return view('admin.web.order',[
+            'order'=>$order
+        ]);
     }
-    public function orderDetail()
+    public function orderDetail($id)
     {
-        return view('admin.web.orderDetail');
-    }
+        $order=Order::where("id",$id)->first();
+        return view('admin.web.orderDetail',[
+            'order'=>$order,
+        ]);    }
     public function categoryDetail($id)
     {
         $brand=Brand::where("id",$id)->first();

@@ -20,4 +20,8 @@ class Product extends Model
     public function products()
     {
         return $this->belongsTo(Brand::class,'brand_id');
-}}
+}public function order()
+    {
+        return $this->belongsTo(Order::class,'order_id');
+}
+}
