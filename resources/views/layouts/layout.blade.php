@@ -309,6 +309,102 @@
 <button id="scroll__top"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/></svg></button>
 
 @include('HTML.scripts')
+<!-- Add this script at the end of your HTML file, just before the closing </body> tag -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const addToCartButtons = document.querySelectorAll('.product__add--to__card .product__card--btn');
+        const minicart = document.getElementById('minicart');
+        const itemsCountSpan = document.querySelector('.items__count'); // Select the span element for items count
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const productCard = button.closest('.product__card');
+                const productId = productCard.dataset.productId;
+                const productName = productCard.querySelector('.product__card--title').textContent;
+                const productPrice = productCard.querySelector('.current__price').textContent;
+                const productImageSrc = productCard.querySelector('.product__card--thumbnail__img').getAttribute('src'); // Get the image src
+
+                const product = {
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    imageSrc: productImageSrc // Save the image source
+                };
+
+                let cartItems = localStorage.getItem('cartItems');
+
+                if (!cartItems) {
+                    cartItems = [];
+                } else {
+                    cartItems = JSON.parse(cartItems);
+                }
+
+                cartItems.push(product);
+
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+                alert('Product added to cart!');
+
+                // Update minicart and items count
+                updateMinicart(cartItems);
+            });
+        });
+
+        // Function to update minicart HTML and items count
+        function updateMinicart(cartItems) {
+            minicart.innerHTML = ''; // Clear minicart content
+            itemsCountSpan.textContent = cartItems.length; // Update items count
+
+            cartItems.forEach(product => {
+                const productItem = document.createElement('div');
+                productItem.classList.add('minicart__product--items', 'd-flex');
+                productItem.innerHTML = `
+                <div class="minicart__thumb">
+                    <a href="product-details.html"><img src="${product.imageSrc}" alt="product-img"></a>
+                </div>
+                <div class="minicart__text">
+                    <h4 class="minicart__subtitle"><a href="product-details.html">${product.name}</a></h4>
+                    <div class="minicart__price">
+                        <span class="minicart__current--price">${product.price}</span>
+                    </div>
+                    <div class="minicart__text--footer d-flex align-items-center">
+                        <button class="minicart__product--remove" type="button" data-productid="${product.id}">Remove</button>
+                    </div>
+                </div>
+            `;
+                minicart.appendChild(productItem);
+            });
+
+            // Add event listeners to remove buttons
+            // Add event listeners to remove buttons
+            const removeButtons = document.querySelectorAll('.minicart__product--remove');
+            removeButtons.forEach((button, index) => {
+                button.addEventListener('click', function () {
+                    // Remove the first item from cartItems
+                    cartItems.splice(index, 1);
+
+                    // Update localStorage and minicart
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    updateMinicart(cartItems);
+                });
+            });
+
+        }
+
+        // Initial update of minicart
+        let initialCartItems = localStorage.getItem('cartItems');
+        if (initialCartItems) {
+            initialCartItems = JSON.parse(initialCartItems);
+            updateMinicart(initialCartItems);
+        }
+    });
+
+
+</script>
+
+
 </body>
 </html>
 
