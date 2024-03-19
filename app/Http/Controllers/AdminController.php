@@ -7,6 +7,8 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\UserLogin;
 use Illuminate\Http\Request;
+use Intervention\Image\Image;
+
 class AdminController extends Controller
 {
     public function dashboard()
@@ -58,6 +60,8 @@ class AdminController extends Controller
             $fileName = time().$file->getClientOriginalName();
             $path = public_path("images/product");
             $file->move($path,$fileName);
+            $resizedImage = Image::make($file)->fit(900, 900);
+            $resizedImage->save($path . '/' . $fileName);
             $thumbnail = "/images/product/".$fileName;
         }
         $product= Product::create([
