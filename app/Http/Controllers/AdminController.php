@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
-use App\Models\Order;
 use App\Models\Product;
 use App\Models\UserLogin;
 use Illuminate\Http\Request;
-use Intervention\Image\Image;
-
 class AdminController extends Controller
 {
     public function dashboard()
@@ -60,8 +57,6 @@ class AdminController extends Controller
             $fileName = time().$file->getClientOriginalName();
             $path = public_path("images/product");
             $file->move($path,$fileName);
-            $resizedImage = Image::make($file)->fit(900, 900);
-            $resizedImage->save($path . '/' . $fileName);
             $thumbnail = "/images/product/".$fileName;
         }
         $product= Product::create([
@@ -84,17 +79,12 @@ class AdminController extends Controller
     }
     public function order()
     {
-        $order=Order::get();
-        return view('admin.web.order',[
-            'order'=>$order
-        ]);
+        return view('admin.web.order');
     }
-    public function orderDetail($id)
+    public function orderDetail()
     {
-        $order=Order::where("id",$id)->first();
-        return view('admin.web.orderDetail',[
-            'order'=>$order,
-        ]);    }
+        return view('admin.web.orderDetail');
+    }
     public function categoryDetail($id)
     {
         $brand=Brand::where("id",$id)->first();
