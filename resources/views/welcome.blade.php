@@ -11,9 +11,8 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="slider__content">
-                                            <h2 class="slider__maintitle text__primary h1">Beauty is Whatever <br>
+                                            <h2 style="color:white; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px  1px 0 #000,1px  1px 0 #000;" class="slider__maintitle text__primary h1">Fragrant is Whatever <br>
                                                 Brings Perfect</h2>
-                                            <p class="slider__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  aliquip ex ea commodo consequat. </p>
                                             <a class="primary__btn slider__btn" href="shop.html">
                                                 SHOP NOW
                                                 <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +24,7 @@
                                 </div>
                             </div>
                             <div class="hero__slider--layer">
-                                <img class="slider__layer--img" src="assets/img/slider/home1-slider1-layer.png" alt="slider-img">
+                                <img class="slider__layer--img" src="img/slider/home1-slider7.webp" alt="slider-img">
                             </div>
                         </div>
                     </div>
@@ -35,9 +34,8 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="slider__content">
-                                            <h2 class="slider__maintitle text__primary h1">Beauty is Whatever <br>
+                                            <h2 style="color:white; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px  1px 0 #000,1px  1px 0 #000;" class="slider__maintitle text__primary h1">Fragrant is Whatever <br>
                                                 Brings Perfect</h2>
-                                            <p class="slider__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  aliquip ex ea commodo consequat. </p>
                                             <a class="primary__btn slider__btn" href="shop.html">
                                                 SHOP NOW
                                                 <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +47,7 @@
                                 </div>
                             </div>
                             <div class="hero__slider--layer">
-                                <img class="slider__layer--img" src="assets/img/slider/home1-slider2-layer.png" alt="slider-img">
+                                <img class="slider__layer--img" src="img/slider/home1-slider5.png" alt="slider-img">
                             </div>
                         </div>
                     </div>
@@ -59,9 +57,8 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="slider__content">
-                                            <h2 class="slider__maintitle text__primary h1">Beauty is Whatever <br>
+                                            <h2 style="color:white; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px  1px 0 #000,1px  1px 0 #000;" class="slider__maintitle text__primary h1">Fragrant is Whatever <br>
                                                 Brings Perfect</h2>
-                                            <p class="slider__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  aliquip ex ea commodo consequat. </p>
                                             <a class="primary__btn slider__btn" href="shop.html">
                                                 SHOP NOW
                                                 <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +70,7 @@
                                 </div>
                             </div>
                             <div class="hero__slider--layer">
-                                <img class="slider__layer--img" src="assets/img/slider/home1-slider3-layer.png" alt="slider-img">
+                                <img class="slider__layer--img" src="img/slider/home1-slider6.webp" alt="slider-img">
                             </div>
                         </div>
                     </div>
@@ -122,7 +119,7 @@
                     <div class="image__width--text__thumbnail position-relative">
                         <img src="assets/img/banner/banner1.webp" alt="image">
                         <div class="image__width--text">
-                            <h2 class="image__width--text__title">Face Your Skin With Us</h2>
+                            <h2 class="image__width--text__title">Smell Good With Us</h2>
                             <p class="image__width--text__desc">Kidlues ispum maruwes cnsectetur adipisicing elit, sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div class="image__width--text__footer">
@@ -141,7 +138,7 @@
                         </div>
                     </div>
                     <div class="image__width--text__thumbnail thumbnail2">
-                        <img src="assets/img/banner/banner2.webp" alt="image">
+                        <img src="assets/img/banner/banner35.jpg" alt="image">
                     </div>
                 </div>
             </div>
@@ -221,7 +218,7 @@
                                             <span class="rating__review--text">(126) Review</span>
                                         </li>
                                     </ul>
-                                    <h3 class="product__card--title"><a href="product-details.html">{{$w->name}}</a></h3>
+                                    <h3 class="product__card--title"><span>{{$w->name}}</span></h3>
                                     <div class="product__card--price">
                                         <span class="current__price">${{$w->price}}</span>
                                     </div>

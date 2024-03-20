@@ -365,7 +365,7 @@
                     <a href="product-details.html"><img src="${product.imageSrc}" alt="product-img"></a>
                 </div>
                 <div class="minicart__text">
-                    <h4 class="minicart__subtitle"><a href="product-details.html">${product.name}</a></h4>
+                    <h4 class="minicart__subtitle"><span href="#">${product.name}</span></h4>
                     <div class="minicart__price">
                         <span class="minicart__current--price">${product.price}</span>
                     </div>
