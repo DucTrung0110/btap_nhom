@@ -368,12 +368,8 @@
         </div>
         <div class="minicart__amount">
             <div class="minicart__amount_list d-flex justify-content-between">
-                <span>Sub Total:</span>
-                <span><b>$240.00</b></span>
-            </div>
-            <div class="minicart__amount_list d-flex justify-content-between">
                 <span>Total:</span>
-                <span><b>$240.00</b></span>
+                <span><b class="totalPriceSpan"></b></span>
             </div>
         </div>
         <div class="minicart__button d-flex justify-content-center">

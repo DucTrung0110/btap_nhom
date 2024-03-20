@@ -357,6 +357,7 @@
             minicart.innerHTML = ''; // Clear minicart content
             itemsCountSpan.textContent = cartItems.length; // Update items count
 
+            let totalPrice = 0; // Initialize total price
             cartItems.forEach(product => {
                 const productItem = document.createElement('div');
                 productItem.classList.add('minicart__product--items', 'd-flex');
@@ -374,6 +375,9 @@
                     </div>
                 </div>
             `;
+                totalPrice += parseFloat(product.price.replace('$', ''));
+                const totalPriceSpan = document.querySelector('.totalPriceSpan');
+                totalPriceSpan.textContent = `$${totalPrice.toFixed(2)}`;
                 minicart.appendChild(productItem);
             });
 
