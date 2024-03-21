@@ -17,7 +17,7 @@
                 </div>
                 <div class="main__logo">
                     <h1 class="main__logo--title"><a class="main__logo--link" href="/">
-                            <img class="main__logo--img" src="assets/img/logo/nav-log.webp" alt="logo-img">
+                            <img class="main__logo--img" src="../assets/img/logo/nav-log.webp" alt="logo-img">
                         </a></h1>
                 </div>
                 <div class="header__menu d-none d-lg-block">
@@ -97,7 +97,7 @@
                                         <li class="header__mega--menu__li banner__child">
                                             <div class="header__mega--menu__banner">
                                                 <a href="shop.html">
-                                                    <img class="header__mega--menu__banner--img" src="assets/img/banner/banner-menu.webp" alt="banner">
+                                                    <img class="header__mega--menu__banner--img" src="../assets/img/banner/banner-menu.webp" alt="banner">
                                                 </a>
                                             </div>
                                         </li>
@@ -199,7 +199,7 @@
         <div class="offcanvas__inner">
             <div class="offcanvas__logo">
                 <a class="offcanvas__logo_link" href="/">
-                    <img src="assets/img/logo/nav-log.webp" alt="Logo-img" width="158" height="36">
+                    <img src="../assets/img/logo/nav-log.webp" alt="Logo-img" width="158" height="36">
                 </a>
                 <button class="offcanvas__close--btn" data-offcanvas>close</button>
             </div>

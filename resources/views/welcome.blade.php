@@ -84,7 +84,7 @@
         <section class="shop__collection--section section--padding">
             <div class="container">
                 <div class="section__heading text-center mb-40">
-                    <h2 class="section__heading--maintitle">Shop By Category</h2>
+                    <h2 class="section__heading--maintitle">Our Best Seller</h2>
                 </div>
                 <div class="shop__collection--column5 swiper">
                     <div class="swiper-wrapper">

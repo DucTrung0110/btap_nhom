@@ -21,7 +21,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/contact',[\App\Http\Controllers\Webcontroller::class,'contact']);
 Route::get('/dashboard',[\App\Http\Controllers\Webcontroller::class,'dashboard']);
-Route::get('/invoice',[\App\Http\Controllers\Webcontroller::class,'invoice']);
+Route::get('/invoice/{order}',[\App\Http\Controllers\Webcontroller::class,'invoice']);
 Route::get('/shoppingcart',[\App\Http\Controllers\Webcontroller::class,'shoppingcart']);
 Route::get('/checkout',[\App\Http\Controllers\Webcontroller::class,'checkout']);
 Route::prefix("/admin")->middleware(["auth","admin"])->group(function () {

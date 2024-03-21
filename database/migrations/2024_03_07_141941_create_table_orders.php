@@ -18,10 +18,8 @@ return new class extends Migration
             $table->unsignedDecimal("total");
             $table->string("payment_method");
             $table->unsignedBigInteger("user_id");
-            $table->unsignedBigInteger("product_id");
             $table->string('address');
             $table->foreign("user_id")->references("id")->on("users");
-            $table->foreign("product_id")->references("id")->on("products");
             $table->timestamps();
         });
     }

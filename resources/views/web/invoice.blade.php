@@ -18,26 +18,15 @@
                         <div class="invoice-item">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="invoice-info">
-                                        <strong class="customer-text">Invoice From</strong>
-                                        <p class="invoice-details invoice-details-two">
-                                            Dr. Darren Elder <br>
-                                            806 Twin Willow Lane, Old Forge,<br>
-                                            Newyork, USA <br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
                                     <div class="invoice-info invoice-info2">
                                         <p class="invoice-details">
-                                            <strong>Order:</strong> #00124 <br>
-                                            <strong>Issued:</strong> 20/07/2023
+                                            <strong>Order:</strong> #{{$order->id}} <br>
+                                                <strong>Issued:</strong> {{$order->date}}
                                         </p>
                                         <strong class="customer-text">Invoice To</strong>
                                         <p class="invoice-details">
-                                            Walter Roberson <br>
-                                            299 Star Trek Drive, Panama City, <br>
-                                            Florida, 32405, USA <br>
+                                            {{$order->user->name}} <br>
+                                            {{$order->address}} <br>
                                         </p>
                                     </div>
                                 </div>
@@ -51,9 +40,8 @@
                                     <div class="invoice-info">
                                         <strong class="customer-text">Payment Method</strong>
                                         <p class="invoice-details invoice-details-two">
-                                            Debit Card <br>
-                                            XXXXXXXXXXXX-2541 <br>
-                                            HDFC Bank<br>
+                                            {{$order->payment_method}}<br>
+
                                         </p>
                                     </div>
                                 </div>
@@ -68,24 +56,16 @@
                                         <table class="invoice-table table table-bordered">
                                             <thead>
                                             <tr>
-                                                <th>Description</th>
+                                                <th>Name</th>
                                                 <th class="text-center">Quantity</th>
-                                                <th class="text-center">VAT</th>
                                                 <th class="text-end">Total</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td>General Consultation</td>
+                                                <td>{{$order->product->name}}</td>
                                                 <td class="text-center">1</td>
-                                                <td class="text-center">$0</td>
-                                                <td class="text-end">$100</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Video Call Booking</td>
-                                                <td class="text-center">1</td>
-                                                <td class="text-center">$0</td>
-                                                <td class="text-end">$250</td>
+                                                <td class="text-end">${{$order->product->price}}</td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -96,12 +76,8 @@
                                         <table class="invoice-table-two table">
                                             <tbody>
                                             <tr>
-                                                <th>Subtotal:</th>
-                                                <td><span>$350</span></td>
-                                            </tr>
-                                            <tr>
                                                 <th>Total Amount:</th>
-                                                <td><span>$315</span></td>
+                                                <td><span>${{$order->total}}</span></td>
                                             </tr>
                                             </tbody>
                                         </table>

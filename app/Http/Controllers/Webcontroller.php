@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\UserLogin;
 use Illuminate\Http\Request;
@@ -24,8 +26,10 @@ class Webcontroller extends Controller
     }
     public function dashboard()
     {
-        return view('web.dashboard');
-    }
+        $dashboard= Order::where("user_id",auth()->user()->id)->get();
+        return view('web.dashboard',[
+            "dashboard"=>$dashboard
+        ]);    }
     public function shoppingcart()
     {
         return view('web.shoppingcart');
@@ -34,8 +38,11 @@ class Webcontroller extends Controller
     {
         return view('web.checkout');
     }
-    public function invoice()
+    public function invoice($id)
     {
-        return view('web.invoice');
+        $order=Order::where("id",$id)->first();
+        return view('web.invoice',[
+            'order'=>$order,
+        ]);
     }
 }
